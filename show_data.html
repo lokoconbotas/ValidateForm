@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Data</title>
+
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="jumbotron">
+				<div class="tittle">
+					<h1>Northside Youth Soccer League</h1>             
+				</div>
+				<div class="logoimage"></div>
+			</div>
+			<div class="banner_tittle">
+				Thank you!
+			</div>
+
+			<div class="container">
+
+				<div class="content">
+					<p align="center">&nbsp;</p>
+					<h2 align="center">The following information has been sent as your feedback:</h2>
+
+					<table class="form_table">
+						<tr>
+							<th align="center">Form Field</th>
+							<th align="center">Field Value</th>
+						</tr>
+
+						<script language="javascript">
+							var args = location.search.substr(1).split('&');
+							console.log(args);
+							for (var i = 0; i < args.length; ++i) {
+								var parts = args[i].split('=');
+								console.log(parts);
+								if (parts != null) {
+									var field = parts[0];
+									var value = parts[1];
+									if (value == null) {
+										value = "null"
+									}
+									else {
+										value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+									}
+
+									document.writeln('<tr><td align="center">' + field + '</td>');
+									document.writeln('<td align="center">' + value + '</td></tr>');
+								}
+							}
+						</script>
+
+					</table>
+					<br>
+					<div class="back_button">
+						<button><a href="index.html">Back</a></button>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<footer>&copy; 2016 Ubiqum Code Academy</footer>
+	</body>
+</html>
